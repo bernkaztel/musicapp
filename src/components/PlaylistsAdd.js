@@ -5,10 +5,11 @@ import {connect} from 'react-redux';
 class PlayList extends Component {
   constructor(){
     super();
-    // this.onClickSave = this.onClickSave.bind(this);
-    // this.onListNameChange = this.onListNameChange.bind(this);
-    // this.onListUrlChange = this.onListUrlChange.bind(this);
-    // this.makeBundle = this.makeBundle.bind(this);
+     this.onClickSave = this.onClickSave.bind(this);
+     this.onChangeSong = this.onChangeSong.bind(this);
+     this.onChangeArtist = this.onChangeArtist.bind(this);
+     this.onChangeAlbum = this.onChangeAlbum.bind(this);
+     this.makeBundle = this.makeBundle.bind(this);
     this.state={
     song: "", 
     artist: ""
@@ -57,10 +58,10 @@ class PlayList extends Component {
     return (
         <form>
         <div className="form-group">
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Song"/>
+          <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Song"/>
           </div>
           <div className="form-group">
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Artist"/>
+            <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Artist"/>
           </div>
             <div className="form-group">
               <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Album"/>

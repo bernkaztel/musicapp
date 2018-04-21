@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //Importamos el creador de acciones 
 import saveNewListAction from '../actions/saveNewListAction'
 import {connect} from 'react-redux'; 
+import {Playlist} from './Playlists'
 
 
  class CreatePlaylist extends Component {
@@ -51,7 +52,6 @@ import {connect} from 'react-redux';
     return (
       <div className="playlist">
         <form>
-          <button type="button" className="btn btn-dark" >+ Add List</button>
           <div className="form-group">
             <input type="text" className="form-control"   onChange={this.onListNameChange} placeholder="Name"/>
             </div>
