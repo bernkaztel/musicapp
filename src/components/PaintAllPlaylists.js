@@ -9,18 +9,19 @@ class PaintAllPlayLists extends Component {
   }
   paintPlaylist(playlistkey, index) {
     //Guardamos el objeto completo
-    const fullObject = this.props.playlistsFromReducer;
+    const fullObject = this.props.playlistsFromReducer.playlists;
     //Usamos la key para acceder a la playlist desde props
       const playlist = fullObject[playlistkey];
       const playlistimg = playlist.urlimg
+      const playlistSongs = playlist.songs
       console.log(playlistimg)
-      return <Playlist key={index} index={index} name={playlistkey} img={playlistimg} />
+      return <Playlist key={index} index={playlistkey} name={playlistkey} img={playlistimg} songs={playlistSongs} />
   }
 
   render() {
     return (
       <div className="song">
-        {Object.keys(this.props.playlistsFromReducer).map(this.paintPlaylist)}
+        {Object.keys(this.props.playlistsFromReducer.playlists).map(this.paintPlaylist)}
       </div>
     );
   }
@@ -30,7 +31,7 @@ class PaintAllPlayLists extends Component {
 //coursesReducer viene del nombre que se le dio en el rootreductor
 function mapStateToProps(state, ownProps) {
   return {
-    playlistsFromReducer: state.mainReducer.playlists
+    playlistsFromReducer: state.mainReducer
   };
 }
 
