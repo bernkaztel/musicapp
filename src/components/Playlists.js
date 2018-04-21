@@ -8,6 +8,7 @@ export default class PlayList extends Component {
     this.paintSongs = this.paintSongs.bind(this);
   }
   paintSongs(song){
+    console.log(song)
     return <NewSong  key={song} songKey={song} allSongs={this.props.songs}/>
   }
   render() {

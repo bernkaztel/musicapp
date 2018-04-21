@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Playlist from "./Playlists";
 import { connect } from "react-redux";
+import { compose } from 'redux'
+import { firebaseConnect, isLoaded, isEmpty } from 'react-redux-firebase'
 
 class PaintAllPlayLists extends Component {
   constructor() {
@@ -8,20 +10,16 @@ class PaintAllPlayLists extends Component {
     this.paintPlaylist = this.paintPlaylist.bind(this);
   }
   paintPlaylist(playlistkey, index) {
-    //Guardamos el objeto completo
-    const fullObject = this.props.playlistsFromReducer.playlists;
-    //Usamos la key para acceder a la playlist desde props
-      const playlist = fullObject[playlistkey];
-      const playlistimg = playlist.urlimg
-      const playlistSongs = playlist.songs
-      console.log(playlistimg)
-      return <Playlist key={index} index={playlistkey} name={playlistkey} img={playlistimg} songs={playlistSongs} />
+    const selectedPlaylist = (this.props.playlistsFromReducer[playlistkey])
+    const user = "user-owner"
+     return <Playlist key={index} index={playlistkey} name={selectedPlaylist.name} img={selectedPlaylist.url} songs={selectedPlaylist.songs}  />
   }
 
   render() {
+    
     return (
       <div className="song">
-        {Object.keys(this.props.playlistsFromReducer.playlists).map(this.paintPlaylist)}
+        { Object.keys(this.props.playlistsFromReducer || {}).map(this.paintPlaylist)}
       </div>
     );
   }
@@ -37,4 +35,15 @@ function mapStateToProps(state, ownProps) {
 
 //Se hace la conección entre el componente y redux
 //Si se le psa mapDispatchToProps ya no existe la función dispatch en el componente
-export default connect(mapStateToProps)(PaintAllPlayLists);
+
+export default compose(
+  firebaseConnect([
+    'playlists' // { path: '/todos' } // object notation
+  ]),
+  connect((state) => ({
+    playlistsFromReducer: state.firebase.data.playlists,
+    // profile: state.firebase.profile // load profile
+  }))
+)(PaintAllPlayLists)
+
+// export default connect(mapStateToProps)(PaintAllPlayLists);

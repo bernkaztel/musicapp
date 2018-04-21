@@ -1,15 +1,14 @@
-import firebase from 'firebase';
+// import firebase from 'firebase';
 
-const config = {
- apiKey: 'AIzaSyAQXwpsinfFUQCUtSXp9IbWRxgTUH8Q4KQ',
- authDomain: 'fir-try-4857b.firebaseapp.com',
- databaseURL: 'https://fir-try-4857b.firebaseio.com/'
-};
+// const config = {
+//  apiKey: 'AIzaSyAQXwpsinfFUQCUtSXp9IbWRxgTUH8Q4KQ',
+//  authDomain: 'fir-try-4857b.firebaseapp.com',
+//  databaseURL: 'https://fir-try-4857b.firebaseio.com/'
+// };
 
-const firebaseApp = firebase.initializeApp(config);
-const database = firebase.database();
-const firebaseAuth = firebaseApp.auth();
-
+// const database = firebase.database();
+// const firebaseAuth = firebaseApp.auth();
 
 
-export default {database, firebaseAuth};
+
+// export default {database, firebaseAuth};
