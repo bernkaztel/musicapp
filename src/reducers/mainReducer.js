@@ -3,7 +3,7 @@ let initialState = {
     one: {
       owner: "",
       urlimg:
-        "https://www.pexels.com/photo/close-up-photography-of-yellow-flowers-1018048/",
+        "https://blog.missguided.co.uk/wp-content/uploads/2015/01/elsmix.gif",
       songs: {
         Westcoast: {
           artist: "Lana",

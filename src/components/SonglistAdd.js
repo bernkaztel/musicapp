@@ -58,6 +58,7 @@ class SonglistAdd extends Component {
 
   render() {
     return (
+        
         <form>
         <div className="form-group">
           <input type="text" className="form-control"  onChange={this.onChangeSong} id="formGroupExampleInput" placeholder="Song"/>
@@ -68,7 +69,7 @@ class SonglistAdd extends Component {
             <div className="form-group">
               <input type="text" className="form-control"   onChange={this.onChangeAlbum} id="formGroupExampleInput2" placeholder="Album"/>
           </div>
-              <button type="submit" index={this.props.index} onClick={this.onClickSave} >add new song</button>
+        <button type="submit" className="btn" id="btnadd" index={this.props.index} onClick={this.onClickSave} >add new song</button>
       </form>
     )
   }

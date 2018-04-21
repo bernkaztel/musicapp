@@ -50,15 +50,15 @@ import {Playlist} from './Playlists'
   }
   render() {
     return (
-      <div className="playlist">
-        <form>
+      <div className="col-lg-3 playlist p-3 ml-5 mt-5 ">
+        <form className = "playlist-form">
           <div className="form-group">
             <input type="text" className="form-control"   onChange={this.onListNameChange} placeholder="Name"/>
             </div>
             <div className="form-group">
               <input type="text" className="form-control"   onChange={this.onListUrlChange} placeholder="URL Image"/>
             </div>
-              <button type="submit"  onClick={this.onClickSave}>add new playlist</button>
+              <button type="submit" id="btnsub"  onClick={this.onClickSave}>add new playlist</button>
         </form>
       </div>
     )

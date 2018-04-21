@@ -20,7 +20,7 @@ class PaintAllPlayLists extends Component {
 
   render() {
     return (
-      <div className="song">
+      <div className="col-lg-8 song mt-5 ml-4">
         {Object.keys(this.props.playlistsFromReducer.playlists).map(this.paintPlaylist)}
       </div>
     );
