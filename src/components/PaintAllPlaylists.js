@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Playlist from './Playlists'
+import {connect} from 'react-redux'; 
 
-export default class PaintAllPlayLists extends Component {
+ class PaintAllPlayLists extends Component {
     paintPlaylist(){
-        return <Playlist></Playlist>
+        return 
     }
   render() {
     return (
@@ -13,3 +14,18 @@ export default class PaintAllPlayLists extends Component {
     )
   }
 }
+
+//Función para recibir propiedades del estado de la tienda
+//coursesReducer viene del nombre que se le dio en el rootreductor
+function   mapStateToProps(state, ownProps){
+  return {
+      playlistsFromReducer: state.mainReducer
+  } 
+}
+
+
+
+  
+  //Se hace la conección entre el componente y redux
+  //Si se le psa mapDispatchToProps ya no existe la función dispatch en el componente
+  export default connect(mapStateToProps)(PaintAllPlayLists);

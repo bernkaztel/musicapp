@@ -12,7 +12,6 @@ export default class App extends Component {
       <div>
         <CreatePlayList/>
         <PaintAllPlaylists/>
-        <Playlists />
       </div>
     );
   }
