@@ -3,7 +3,7 @@ import Playlist from './Playlists'
 
 export default class PaintAllPlayLists extends Component {
     paintPlaylist(){
-        return <Playlist></Playlist>
+        return <Playlist>{}</Playlist>
     }
   render() {
     return (
