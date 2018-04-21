@@ -25,7 +25,7 @@ export default function mainReducer(state = initialState, action) {
       let songObject = action.payload[1];
       let copyPlaylistWithSongObject = copySelectedPlaylist.songs;
       copyPlaylistWithSongObject[songObject.title] = songObject;
-      return { ...state, [action.payload[0]]: copyPlaylistWithSongObject };
+      return { ...state, copySelectedPlaylist: copyPlaylistWithSongObject };
       return state;
     case "REMOVE_SONG":
       return state;
