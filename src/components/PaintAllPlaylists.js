@@ -4,12 +4,14 @@ import {connect} from 'react-redux';
 
  class PaintAllPlayLists extends Component {
     paintPlaylist(){
-        return 
+        return <Playlist/>
+        
     }
   render() {
     return (
       <div className="song">
        AQUÍ TIENEN QUE PINTAR LAS PLAYLISTS
+
       </div>
     )
   }
