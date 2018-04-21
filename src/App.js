@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import NavBar from './components/navbar';
-import { Switch, Route } from "react-router-dom";
+import CreatePlayList from './components/createPlaylist'
+import Playlists from './components/Playlists'
+import PaintAllPlaylists from './components/PaintAllPlaylists'
+
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <NavBar/>
-        <Switch>
-        <Route  />
-        <Route/>
-      </Switch>
+      <div>
+        <CreatePlayList/>
+        <PaintAllPlaylists/>
+        <Playlists />
       </div>
     );
   }
 }
 
-export default App;
+

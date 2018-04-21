@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Song extends Component {
+export default class PlayList extends Component {
   render() {
     return (
       <div className="song">

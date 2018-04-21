@@ -1,3 +1,4 @@
-export default function saveNewList(newList){
-    return {type: "SAVE_NEW_LIST", newList: newList}
+export default function saveNewListAction(newListBundle){
+    console.log(newListBundle)
+    return {type: "SAVE_NEW_LIST", payload: newListBundle}
 }
