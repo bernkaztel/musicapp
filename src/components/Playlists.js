@@ -4,10 +4,10 @@ import PlaylistAdd from './PlaylistsAdd'
 export default class PlayList extends Component {
   render() {
     return (
-        <div>
+        <div key={this.props.index}>
           <div>
-          <h3 className="d-inline" >PlayList Name</h3>
-          <img src="" alt="image"/>
+          <h3 className="d-inline" >{this.props.name}</h3>
+          <img src={this.props.img} alt="image"/>
         </div>
         <PlaylistAdd/>
       </div>

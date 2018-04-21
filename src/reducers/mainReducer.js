@@ -1,5 +1,9 @@
 let initialState={
-  playlists: {},
+  playlists: {
+    one:{
+      urlimg: "https://www.pexels.com/photo/close-up-photography-of-yellow-flowers-1018048/"
+    }
+  },
 }
 
 
