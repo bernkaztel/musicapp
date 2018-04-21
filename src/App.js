@@ -10,6 +10,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <NavBar/>
         <CreatePlayList/>
         <PaintAllPlaylists/>
       </div>
