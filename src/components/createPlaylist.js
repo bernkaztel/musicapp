@@ -58,7 +58,7 @@ import {Playlist} from './Playlists'
             <div className="form-group">
               <input type="text" className="form-control"   onChange={this.onListUrlChange} placeholder="URL Image"/>
             </div>
-              <button type="submit"  onClick={this.onClickSave}>add</button>
+              <button type="submit"  onClick={this.onClickSave}>add new playlist</button>
         </form>
       </div>
     )
