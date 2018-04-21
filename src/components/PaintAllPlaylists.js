@@ -13,8 +13,9 @@ class PaintAllPlayLists extends Component {
     //Usamos la key para acceder a la playlist desde props
       const playlist = fullObject[playlistkey];
       const playlistimg = playlist.urlimg
+      const playlistSongs = playlist.songs
       console.log(playlistimg)
-      return <Playlist key={index} index={index} name={playlistkey} img={playlistimg} />
+      return <Playlist key={index} index={playlistkey} name={playlistkey} img={playlistimg} songs={playlistSongs} />
   }
 
   render() {
